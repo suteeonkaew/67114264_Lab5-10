@@ -1,14 +1,19 @@
 ======================================================
 COE67-222 Operating Systems - Lab 09 Report
-Name: 
-Student ID: 
+Name: Sutee Onkaew
+Student ID: 67114264
 ======================================================
 
 1. Inodes and Metadata:
-In the `inode_inspector.py` script, we printed the "Inode Number". If you rename the file using the Linux `mv` command, will the Inode Number change? Why or why not? (Hint: Think about how the OS separates the file name from the actual data).
+Renaming a file within the same filesystem normally keeps its inode number unchanged because the filename is separate from the inode. My file had inode 1442922 and a size of 43 bytes. I have not yet tested renaming it.
 
 2. POSIX Permissions:
-If you want to set a file's permission so that the Owner has Read/Write/Execute (7), the Group has Read/Execute (5), and Others have absolutely no access (0), what would be the 3-digit octal number you pass into `os.chmod()`? 
+The required mode is 750:
+Owner = 7 (read, write, execute)
+Group = 5 (read, execute)
+Others = 0 (no access)
+
+Example: os.chmod(filename, 0o750)
 
 3. The AI Context:
-Why is it safer to rely on Operating System file permissions (like `os.chmod(0o444)`) to protect production model weights rather than relying solely on application-level logic or Python try-except blocks?
+OS permissions enforce access restrictions even when application code contains mistakes. In my experiment, both write attempts were blocked with PermissionError after making the files read-only. Mode 444 prevents ordinary writes but still allows everyone to read; restricting reads also requires suitable permissions and ownership.

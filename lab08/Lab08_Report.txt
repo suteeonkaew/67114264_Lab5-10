@@ -1,14 +1,14 @@
 ======================================================
 COE67-222 Operating Systems - Lab 08 Report
-Name: 
-Student ID: 
+Name: Sutee Onkaew
+Student ID: 67114264
 ======================================================
 
-1. Disk Scheduling (Phase 2):
-Looking at the output of `disk_scheduler.py`, why did the SCAN algorithm result in a significantly lower "Total Head Movement" compared to FCFS? Explain the logic behind the Elevator behavior.
+1. Disk Scheduling:
+FCFS moved the disk head 640 cylinders, while SCAN moved it 331 cylinders. SCAN serves requests in one direction before reversing, reducing back-and-forth movement for this request list.
 
 2. I/O Bound Concept:
-If an Operating System is described as being "I/O Bound" during a task, what does that actually mean for the CPU? Is the CPU at 100% usage or is it mostly idle? Why?
+An I/O-bound task spends much of its time waiting for storage rather than using the CPU. The CPU may be idle or run other tasks while the requested data is being loaded.
 
-3. AI Industry Connection (Phase 3):
-Explain why storing an AI image dataset as 1,000,000 separate `.jpg` files causes high I/O overhead and GPU starvation compared to packing them into a single sequential binary format (e.g., TFRecord, WebDataset, or HDF5).
+3. AI Industry Connection:
+Reading many separate files requires repeated file opening, metadata checks, and closing. In my experiment, 1000 files took 0.0232 seconds, while one packed file took 0.0016 seconds. Packing data can reduce loading overhead and help supply batches faster, reducing GPU idle time. GPU utilization was not measured in this experiment.

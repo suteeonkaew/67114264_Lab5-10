@@ -1,25 +1,25 @@
 ======================================================
 COE67-222 Operating Systems - Lab 10 Report (Final)
-Name: 
-Student ID: 
+Name: Sutee Onkaew
+Student ID: 67114264
 ======================================================
 
 1. The Role of the Operating System:
-In this mini-project, our Python script simulated the major responsibilities of an Operating System. 
-Match the specific code behavior in `ultimate_cluster_os.py` to the corresponding OS concept you learned throughout the semester:
 
-- File System & Permissions (Lab 9): 
-  [Explain which line of code simulated this and why Workload D failed]
+- File System & Permissions:
+os.path.exists(dataset_path) checks whether the file exists. Workload D failed because secret_keys.txt was missing. This check does not verify actual read permissions.
 
-- Memory Management (Labs 5/6):
-  [Explain how the OS prevented Thrashing by using the `while` loop for RAM allocation]
+- Memory Management:
+The RAM allocation loop makes jobs wait until enough simulated RAM is available. ram_lock protects the shared counter, preventing simultaneous allocations from exceeding the limit.
 
-- Concurrency & Deadlocks (Labs 3/4):
-  [Explain how the OS sorted the requested GPUs to avoid Circular Wait deadlocks]
+- Concurrency & Deadlocks:
+sorted(req_gpus) makes all jobs acquire GPU locks in the same order. This prevents circular waiting between GPU locks.
+
+- CPU Scheduling Queue:
+job_queue stores submitted jobs, and worker threads allow jobs to overlap. This simulates job dispatch rather than Round Robin CPU scheduling.
 
 2. Hardware Utilization:
-Look at the output of your Live Dashboard. Explain how the OS successfully ran Workload A (LLaMA Training), Workload B (Preprocessing), and Workload C (Inference) AT THE SAME TIME without crashing. Why didn't they block each other?
+A used 40GB and GPUs 0–2, B used 16GB without GPUs, and C used 2GB and GPU 3. Together, they used 58GB, leaving 6GB available. Their GPU requests did not conflict, so all three ran concurrently. At shutdown, all simulated RAM and GPUs were released. These resources were simulated, not actual hardware allocations.
 
-3. Course Reflection (AI Engineering Context):
-You are now applying for a role as a Machine Learning Operations (MLOps) Engineer. 
-Write a short paragraph explaining how understanding Operating Systems (Process queues, RAM/Virtual Memory limits, Deadlock avoidance, File systems) gives you an advantage over a programmer who only knows how to write basic Python/PyTorch scripts.
+3. Course Reflection:
+Understanding OS internals helps me identify memory pressure, scheduling delays, permission problems, and deadlocks. As an MLOps engineer, I can use this knowledge to build more reliable AI systems and manage resources more effectively than by focusing only on Python code.
