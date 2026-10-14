@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🖥️ Operating Systems Labs 5–10
+#  Operating Systems Labs 5–10
 
 ### COE67-222 Operating Systems
 
@@ -12,11 +12,11 @@
 
 ---
 
-## 📌 About This Repository
+##  About This Repository
 
 This repository contains the source code and reports for Operating Systems Labs 5–10. The experiments connect OS concepts with AI and MLOps workloads, including memory allocation, CPU scheduling, dataset I/O, file security, and cluster resource management.
 
-## 📚 Lab Contents
+##  Lab Contents
 
 | Lab | Topic | Main Concepts |
 |:---:|---|---|
@@ -27,7 +27,7 @@ This repository contains the source code and reports for Operating Systems Labs 
 | **09** | File Security | Inodes, metadata, POSIX permissions |
 | **10** | AI Cluster Integration | Memory, GPU locks, queues, deadlock avoidance |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 67114264_Lab5-10/
@@ -46,7 +46,7 @@ This repository contains the source code and reports for Operating Systems Labs 
 └── README.md
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 Open the repository in GitHub Codespaces, then run:
 
@@ -133,7 +133,7 @@ cd ..
 
 </details>
 
-## 📊 Experimental Results
+##  Experimental Results
 
 | Lab | Result |
 |:---:|---|
@@ -144,7 +144,7 @@ cd ..
 | **09** | The tested files became read-only, and unauthorized write attempts raised `PermissionError`. |
 | **10** | Training, preprocessing, and inference ran concurrently with **6/64 GB** of simulated RAM remaining. All resources returned to idle after completion. |
 
-## 🔍 Key Findings
+##  Key Findings
 
 - LRU reduced page faults by keeping recently accessed pages in memory.
 - Round Robin allowed short tasks to finish without waiting for a long task to complete.
@@ -154,7 +154,7 @@ cd ..
 - Consistent GPU lock ordering prevented circular-wait deadlocks in the cluster simulation.
 
 
-## 📝 Reports
+##  Reports
 
 Each lab folder contains its own report file. The final submission combines the results and analysis for Labs 5–10 into:
 
