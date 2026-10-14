@@ -153,13 +153,6 @@ cd ..
 - Linux permissions protected configuration files and model weights from accidental writes.
 - Consistent GPU lock ordering prevented circular-wait deadlocks in the cluster simulation.
 
-## ⚠️ Experiment Notes
-
-- The address translation, disk head, RAM, and GPU resources in the scripts are simulations.
-- Lab 6 uses file I/O to demonstrate a slowdown; it does not measure actual OS swap activity.
-- Lab 8 does not measure real GPU utilization.
-- Lab 9 mode `444` prevents ordinary writes but still allows every user to read the file.
-- Lab 10 checks whether a dataset exists; it does not perform a complete permission check.
 
 ## 📝 Reports
 
