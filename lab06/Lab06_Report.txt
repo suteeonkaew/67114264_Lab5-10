@@ -1,0 +1,14 @@
+======================================================
+COE67-222 Operating Systems - Lab 06 Report
+Name: 
+Student ID: 
+======================================================
+
+1. FIFO vs LRU (Phase 2):
+In the `page_replacement.py` script, why did the LRU algorithm perform better (have fewer page faults) than the FIFO algorithm for the given reference string? Explain how LRU decides which page to evict.
+
+2. Understanding Thrashing (Phase 3):
+Based on your observation of `ai_thrashing.py`, define "Thrashing" in your own words. Why is the processing time significantly higher in Scenario 2?
+
+3. AI Engineering Decision:
+If you are training an AI model and your system begins to thrash because the RAM is full, lowering the `batch_size` in your Python code is a common solution. How does lowering the `batch_size` help the Operating System resolve the Thrashing problem?

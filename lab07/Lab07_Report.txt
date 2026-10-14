@@ -1,0 +1,16 @@
+======================================================
+COE67-222 Operating Systems - Lab 07 Report
+Name: 
+Student ID: 
+======================================================
+
+1. The Convoy Effect (Phase 2):
+In the FCFS output of `cpu_scheduler.py`, what is the "Convoy Effect"? How did the presence of Process P1 affect the waiting times of P2 and P3?
+
+2. Choosing the Time Quantum:
+In Round Robin, the Time Quantum is critical. 
+- What happens if the OS sets the Time Quantum extremely large (e.g., Quantum = 100)? Which algorithm does RR start to behave like?
+- What happens if the OS sets the Time Quantum extremely small (e.g., Quantum = 0.0001)? (Hint: Think about Context Switching overhead).
+
+3. AI Context:
+In Phase 3, we used a Round Robin approach for generating tokens in an LLM. Explain why iteration-level Round Robin scheduling prevents long user queries from starving short queries, and how it improves perceived latency (Time To First Token / TTFT) for interactive AI applications.
