@@ -166,7 +166,7 @@ cd ..
 Each lab folder contains its own report file. The final submission combines the results and analysis for Labs 5–10 into:
 
 ```text
-67114264_Lab5-10.pdf
+(ส่งแก้)67114264_Lab5-10.pdf
 ```
 
 ---
